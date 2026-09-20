@@ -13,3 +13,10 @@ def check_upc(first_eleven):
     sum_Of_Even = first_eleven[1] + first_eleven[3] + first_eleven[5] + first_eleven[7] + first_eleven[9]
     total = sum_Of_Odd + sum_Of_Even
     m = total % 10
+    if m == 0:
+        check_digit = 0
+        else: 
+            check_digit = 10 - m
+    return check_digit
+
+    
