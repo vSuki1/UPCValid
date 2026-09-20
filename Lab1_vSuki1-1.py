@@ -21,13 +21,15 @@ def find_upc(first_eleven):
 
 
 
-UpcInput = input("Enter a 12 digit UPC code:")
+UpcInput = input("Enter a 12 digit UPC code: ")
 
-checkDigitInput = int(UpcInput[11])
-
-check_Digit_Calculated = find_upc(UpcInput)
-    
-if checkDigitInput == check_Digit_Calculated:
-    print("Valid")
-else: 
+if len(UpcInput) != 12:
     print("Invalid")
+else:  
+    checkDigitInput = int(UpcInput[11])
+
+    check_Digit_Calculated = find_upc(UpcInput)
+    if checkDigitInput == check_Digit_Calculated:
+         print("Valid")
+    else: 
+        print("Invalid")
