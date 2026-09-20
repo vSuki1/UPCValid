@@ -15,8 +15,8 @@ def find_upc(first_eleven):
     m = total % 10
     if m == 0:
         check_digit = 0
-        else: 
-            check_digit = 10 - m
+    else: 
+        check_digit = 10 - m
     return check_digit
 
 
@@ -26,3 +26,8 @@ def find_upc(first_eleven):
     checkDigitInput = int(UpcInput[11])
 
     check_Digit_Calculated = find_upc(UpcInput)
+    
+    if checkDigitInput == check_Digit_Calculated:
+        print("Valid")
+    else: 
+        print("Invalid")
